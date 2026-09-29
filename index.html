@@ -44,3 +44,95 @@
     <script src="game.js"></script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysticbound - Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <h1>⚡ Mysticbound</h1>
+            <div class="user-info">
+                <span>Level: <strong id="playerLevel">1</strong></span>
+                <span>XP: <strong id="playerXP">0</strong>/100</span>
+                <span>Gold: <strong id="playerGold">0</strong></span>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="battle">Battle</button>
+            <button class="tab-btn" data-tab="collection">Collection</button>
+            <button class="tab-btn" data-tab="deck">Build Deck</button>
+        </div>
+
+        <!-- BATTLE TAB -->
+        <div id="battle-tab" class="tab-content active">
+            <div class="stats">
+                <div class="player-stats">
+                    <p>Your Health: <span id="playerHealth">20</span></p>
+                    <p>Your Mana: <span id="playerMana">5</span>/5</p>
+                </div>
+                <div class="enemy-stats">
+                    <p>Enemy Health: <span id="enemyHealth">20</span></p>
+                    <p>Enemy Mana: <span id="enemyMana">5</span>/5</p>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="field">
+                    <h3>🔴 Enemy</h3>
+                    <div id="enemyField" class="field-zone enemy"></div>
+                    <h3>🔵 Your Field</h3>
+                    <div id="playerField" class="field-zone"></div>
+                </div>
+            </div>
+
+            <div class="hand-area">
+                <h3>Your Hand</h3>
+                <div id="hand" class="hand"></div>
+            </div>
+
+            <div class="controls">
+                <button id="endTurnBtn" class="btn">End Turn</button>
+                <button id="resetBtn" class="btn secondary">New Game</button>
+            </div>
+            
+            <p id="message" class="message"></p>
+        </div>
+
+        <!-- COLLECTION TAB -->
+        <div id="collection-tab" class="tab-content">
+            <div class="collection-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="attack">Attack</button>
+                <button class="filter-btn" data-filter="heal">Heal</button>
+                <button class="filter-btn" data-filter="defend">Defend</button>
+            </div>
+            <div id="collection" class="collection-grid"></div>
+        </div>
+
+        <!-- DECK BUILDING TAB -->
+        <div id="deck-tab" class="tab-content">
+            <div class="deck-builder">
+                <div class="deck-list">
+                    <h3>Available Cards</h3>
+                    <div id="availableCards" class="cards-list"></div>
+                </div>
+                <div class="deck-current">
+                    <h3>Current Deck (30 cards)</h3>
+                    <div id="currentDeck" class="cards-list"></div>
+                    <button id="saveDeckBtn" class="btn">Save Deck</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
