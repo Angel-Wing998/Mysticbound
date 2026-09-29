@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #1a1a2e;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    color: #fff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #64f4d8;
+    text-shadow: 0 0 10px rgba(100, 244, 216, 0.5);
+}
+
+h3 {
+    color: #64f4d8;
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(100, 244, 216, 0.1);
+    border-radius: 10px;
+    border: 2px solid #64f4d8;
+}
+
+.player-stats, .enemy-stats {
+    text-align: center;
+}
+
+.player-stats p, .enemy-stats p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.game-area {
+    margin: 30px 0;
+}
+
+.field {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #764ba2;
+}
+
+.field-zone {
+    display: flex;
+    gap: 10px;
+    min-height: 150px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background: rgba(100, 100, 150, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed #667eea;
+}
+
+.field-zone.enemy {
+    border-color: #ff6b6b;
+}
+
+.hand-area {
+    margin-bottom: 20px;
+}
+
+.hand {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    min-height: 200px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #764ba2;
+}
+
+.card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid #64f4d8;
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(100, 244, 216, 0.4);
+    border-color: #fff;
+}
+
+.card.field-card {
+    opacity: 0.8;
+    cursor: default;
+}
+
+.card.field-card:hover {
+    transform: none;
+}
+
+.card-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.card-cost {
+    background: rgba(255, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.card-power {
+    background: rgba(0, 150, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.btn {
+    background: #64f4d8;
+    color: #1a1a2e;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 10px 10px 0;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+.btn.secondary {
+    background: #764ba2;
+    color: #fff;
+}
+
+.btn.secondary:hover {
+    background: #667eea;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #64f4d8;
+    font-weight: bold;
+    min-height: 25px;
+}
