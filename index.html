@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysticbound - Card Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Mysticbound</h1>
+        
+        <div class="stats">
+            <div class="player-stats">
+                <p>Your Health: <span id="playerHealth">20</span></p>
+                <p>Your Mana: <span id="playerMana">5</span>/5</p>
+            </div>
+            <div class="enemy-stats">
+                <p>Enemy Health: <span id="enemyHealth">20</span></p>
+                <p>Enemy Mana: <span id="enemyMana">5</span>/5</p>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="field">
+                <h3>Battle Field</h3>
+                <div id="playerField" class="field-zone"></div>
+                <div id="enemyField" class="field-zone enemy"></div>
+            </div>
+        </div>
+
+        <div class="hand-area">
+            <h3>Your Hand</h3>
+            <div id="hand" class="hand"></div>
+        </div>
+
+        <button id="drawBtn" class="btn">Draw Card</button>
+        <button id="endTurnBtn" class="btn">End Turn</button>
+        <button id="resetBtn" class="btn secondary">New Game</button>
+        
+        <p id="message" class="message"></p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
